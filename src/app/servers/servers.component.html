@@ -1,3 +1,17 @@
-<!-- Can use the component as many times as we want by using the selector. -->
+<label>Server Name</label>
+<!---<input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
+
+<input
+    type="text"
+    class="form-control"
+    [(ngModel)]="serverName"> <!-- Allows for two-way binding with ngModel. -->
+<!---    <p>{{ serverName }}</p> -->
+
+<!-- Property Binding [Property], -->
+<button class="btn btn-primary" 
+    [disabled]="!allowNewServer" 
+    (click)="onCreateServer()">Add Server</button> <!-- This is event binding. (EventTrigger)="Function()"-->
+<!-- <p [innerText]="allowNewServer"></p> --> <!-- String interpolation. -->
+<p>{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>

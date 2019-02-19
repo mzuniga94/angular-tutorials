@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'; // Necessary for forms and two-way binding.
 
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
@@ -9,10 +10,12 @@ import { ServersComponent } from './servers/servers.component';
   declarations: [
     AppComponent,
     ServerComponent,
-    ServersComponent
+    ServersComponent,
+    
   ],
   imports: [
-    BrowserModule
+    BrowserModule, 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
